@@ -1,0 +1,42 @@
+<h5 class="card-title">Projects <span>| View</span></h5>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Description </th>
+                <th> Status </th>
+                <th> Start Date </th>
+                <th> End Date </th>
+                <th> Client </th>
+                <th> Responsable </th>
+                <th>    </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let pr of projects">
+                <td> {{ pr.nom }} </td>
+                <td> {{ pr.description }} </td>
+                <td>
+                    <span class="badge" [ngClass]="{
+                        'bg-success': pr.status === 'Completed',
+                        'bg-danger': pr.status === 'Suspended',
+                        'bg-warning': pr.status === 'In Progress',
+                        'bg-secondary': pr.status !== 'Completed' && pr.status !== 'Suspended' && pr.status !== 'In Progress'
+                      }">
+                        {{ pr.status }}
+                    </span>
+                </td>
+                <td> {{ pr.date_debut | date:'yyyy-MM-dd' }} </td>
+                <td> {{ pr.date_fin | date:'yyyy-MM-dd' }} </td>
+                <td> <span class="badge bg-success"> {{ pr.nom_client }} </span> </td>
+                <td> <span class="badge bg-danger"> {{ pr.nom_res }} </span> </td>
+                <td>
+                    <button class="btn btn-outline-success btn-sm" routerLink="update/{{pr.id}}"><i class="bi bi-pen-fill"></i></button>
+                    &nbsp;
+                    <a (click)="deleteProject(pr.id)"><button class="btn btn-outline-danger btn-sm"><i class="bi bi-trash"></i></button></a>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

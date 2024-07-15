@@ -1,0 +1,33 @@
+<h5 class="card-title">Users <span>| View</span></h5>
+<div class="table-responsive">
+    <table class="table">
+        <thead>
+            <tr>
+                <th> Name </th>
+                <th> Email </th>
+                <th> Rule </th>
+                <th>    </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let user of users">
+                <td> {{ user.name }} </td>
+                <td> {{ user.email }} </td>
+                <td>
+                    <span class="badge" [ngClass]="{
+                        'bg-success': user.userRole === 'USER',
+                        'bg-danger': user.userRole === 'ADMIN',
+                        'bg-warning': user.userRole !== 'USER' && user.userRole !== 'ADMIN'
+                      }">
+                        {{ user.userRole }}
+                    </span>
+                </td>
+                <td>
+                    <!-- <button class="btn btn-outline-success btn-sm" routerLink="/modifierSalle/{{salle.id}}">Modifier</button>
+                    &nbsp;
+                    <a (click)="deleteSalle(salle.id)"><button class="btn btn-outline-danger btn-sm">Supprimer</button></a> -->
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

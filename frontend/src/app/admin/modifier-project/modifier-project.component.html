@@ -1,0 +1,56 @@
+<h5 class="card-title">Project <span>| Update</span></h5>
+<br>  
+
+<div class="mb-5">
+    <div class="row">
+      <div class="card-body" style="margin-left:50px;">
+        <form [formGroup]="updateProjectForm">
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control p-2" name="nom" id="nom" placeholder="Project" formControlName="nom">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control p-2" name="nom_client" id="nom_client" placeholder="Client" formControlName="nom_client">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <input type="text" class="form-control p-2" name="nom_res" id="nom_res" placeholder="Responsable" formControlName="nom_res">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <input type="date" class="form-control p-2" name="date_debut" id="date_debut" formControlName="date_debut">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <input type="date" class="form-control p-2" name="date_fin" id="date_fin" formControlName="date_fin">
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <select class="form-control p-6" formControlName="status">
+                        <option value="" disabled selected>Choose The Project Status</option>
+                        <option value="In Progress">In Progress</option>
+                        <option value="Completed">Completed</option>
+                        <option value="Suspended">Suspended</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row mb-3">
+                <div class="col-sm-10">
+                    <textarea type="date" class="form-control p-2" name="description" id="description" placeholder="Description" formControlName="description"></textarea>
+                </div>
+            </div>
+
+          
+          <div class="text-center">
+            <input class="btn btn-primary" type="submit" (click)="updateProject()" value="Update">
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
