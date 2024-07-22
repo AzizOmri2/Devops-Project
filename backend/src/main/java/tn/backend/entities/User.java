@@ -1,7 +1,7 @@
 package tn.backend.entities;
 
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.Data;
 
 @Entity
