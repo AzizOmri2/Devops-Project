@@ -111,19 +111,10 @@
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.13.0</version>
 				<configuration>
-<<<<<<< HEAD
 					<source>11</source>
 					<target>11</target>
-=======
-					<source>17</source>
-					<target>17</target>
->>>>>>> 82e06f87ab64ab3b1743c4c9f6e1fed9cedeba32
 				</configuration>
 			</plugin>
 		</plugins>
 	</build>
-<<<<<<< HEAD
 </project>
-=======
-</project>
->>>>>>> 82e06f87ab64ab3b1743c4c9f6e1fed9cedeba32
