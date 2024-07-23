@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { AdminComponent } from './admin/admin.component';
 import { MerciComponent } from './front/merci/merci.component';
-import { MapComponent } from './map/map.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { AuthComponent } from './auth/auth.component';
@@ -35,7 +34,6 @@ const routes: Routes = [
   },
 
   { path: 'merci', component: MerciComponent },
-  { path: 'map', component: MapComponent },
   
   { path: '', redirectTo: '/auth/login', pathMatch: 'full' }, // Default to login page
   { path: '**', redirectTo: '/auth/login' } // Handle any unknown routes
