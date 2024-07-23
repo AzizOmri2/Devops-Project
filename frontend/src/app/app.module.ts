@@ -8,7 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { FrontComponent } from './front/front.component';
 import { MerciComponent } from './front/merci/merci.component';
-import { MapComponent } from './map/map.component';
 import { AuthComponent } from './auth/auth.component';
 import { LoginComponent } from './login/login.component';
 import { MatSnackBarModule } from '@angular/material/snack-bar';
@@ -26,7 +25,6 @@ import { ModifierProjectComponent } from './admin/modifier-project/modifier-proj
     AdminComponent,
     FrontComponent,
     MerciComponent,
-    MapComponent,
     AuthComponent,
     LoginComponent,
     RegisterComponent,
